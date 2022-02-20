@@ -1,0 +1,57 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# GitHub SHAs
+\bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+(?:\[[0-9a-f]+\]\(https:/|)/(?:www\.|)github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+\bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+# gist github
+\bgist\.github\.com/[^/]+/[0-9a-f]+
+# git.io
+\bgit\.io/[0-9a-zA-Z]+
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+]*"
+# Contributor
+\[[^\]]+]\(https://github\.com/[^/]+\)
+# GHSA
+GHSA(?:-[0-9a-z]{4}){3}
+
+# Amazon
+# AWS S3
+\b\w*\.s3\.amazonaws\.com/[-\w/&#%_?:=]*
+# AWS execute-api
+\b[0-9a-z]{10}\.execute-api\.[-0-9a-z]+\.amazonaws\.com\b
+# AWS ELB
+\b\w+\.[-0-9a-z]+\.elb\.amazonaws\.com\b
+# AWS SNS
+\bsns\.[-0-9a-z]+.amazonaws\.com/[-\w/&#%_?:=]*
+# acm
+arn:aws:acm:[^:]+:\d+
+
+\bsearchfox\.org/[^/]+/rev/[0-9a-f]+
+
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+
+_REV=[0-9a-f]+
+^Commit [0-9a-f]+$
+"M \{:06o\} [0-9a-f]+
+
+"SerialNumber" : "[^"]*"
+
+data-blame="[^"]*"
+
+CINNABAR_REVISION=[0-9a-f]+
+
+# Compiler flags
+[\t "'`=(]-[I]
+
+# acceptable duplicates
+\s(long|LONG) \g{-1}\s
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
