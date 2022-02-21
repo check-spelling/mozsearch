@@ -435,7 +435,7 @@ private:
     // In order to accomplish this, we keep alphanumeric chars, underscores,
     // and slashes, and replace everything else with an "@xx" hex encoding.
     // The majority of path characters are letters and slashes which don't get
-    // encoded, so that satisifies (1). Since "@" characters in the unsanitized
+    // encoded, so that satisfies (1). Since "@" characters in the unsanitized
     // path get encoded, there should be no "@" characters in the sanitized path
     // that got preserved from the unsanitized input, so that should satisfy (2).
     // And (3) was done by trial-and-error. Note in particular the dot (.)
@@ -650,7 +650,7 @@ public:
 
         // Write any results from Info.Output that are lexicographically
         // smaller than OldLine (read from the existing file), but make sure
-        // to skip duplicates. Keep advacing NewLinesIter until we reach an
+        // to skip duplicates. Keep advancing NewLinesIter until we reach an
         // entry that is lexicographically greater than OldLine.
         for (; NewLinesIter != Info.Output.end(); NewLinesIter++) {
           if (*NewLinesIter > OldLine) {

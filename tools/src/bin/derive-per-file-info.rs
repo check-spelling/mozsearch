@@ -145,7 +145,7 @@ fn traverse_and_store_coverage(cov_node: &mut json::Object, path_so_far: &str, d
 ///    metadata appropriate for directory listings and search results that match
 ///    the file.
 /// 2. `INDEX_ROOT/detailed-per-file-info/PATH`: A per-file JSON file that
-///    containts detailed per-file data from a number of sources that is either
+///    contains detailed per-file data from a number of sources that is either
 ///    very large or specific to the contents of the file.  For example, code
 ///    coverage data is O(number of lines * number of distinctly tracked
 ///    scenarios).
@@ -208,7 +208,7 @@ fn traverse_and_store_coverage(cov_node: &mut json::Object, path_so_far: &str, d
 ///         `if (os == "win"): https://bugzilla.mozilla.org/show_bug.cgi?id=NNN`
 ///         under a "disabled" mochitest ini-format header would result in
 ///         `["os == \"win\"\n", "https://bugzilla.mozilla.org/show_bug.cgi?id=NNN"]
-///         and a line line the following directly under the test name
+///         and a line like the following directly under the test name
 ///         `disabled: https://bugzilla.mozilla.org/show_bug.cgi?id=NNN` gives
 ///         `[null, "https://bugzilla.mozilla.org/show_bug.cgi?id=NNN"]`.
 ///         - It appears the bug URL's can just be straight bug numbers or
@@ -276,7 +276,7 @@ fn traverse_and_store_coverage(cov_node: &mut json::Object, path_so_far: &str, d
 ///   node in the tree structure is an object with one of the following forms,
 ///   with the root having type "dir":
 ///   - { type: "dir", contents } where:
-///     - "contents": An object directionary whose keys are filenames and value
+///     - "contents": An object dictionary whose keys are filenames and value
 ///        nodes.
 ///   - { type: "file", component, testInfo } where:
 ///     - "component": Value is the numeric bugzilla component to be looked up.

@@ -187,7 +187,7 @@ fn get_concise_file_info<'a>(all_concise_info: &'a json::Object, path: &str) -> 
     for path_component in path.split('/') {
         // The current node must be a directory, get its contents.
         let dir_obj = cur_obj.get("contents")?.as_object()?;
-        // And now find the next node inside the comopnents
+        // And now find the next node inside the components
         cur_obj = dir_obj.get(path_component)?.as_object()?;
     }
 
@@ -324,7 +324,7 @@ fn test_interpolate_coverage() {
             vec![-1, 1, -1, 1, -1],
             vec![-1, 1, -2, 1, -1]
         ],
-        // don't interpolate if the whole file is uncoveredj
+        // don't interpolate if the whole file is uncovered
         vec![
             vec![-1, -1, -1, -1, -1],
             vec![-1, -1, -1, -1, -1]

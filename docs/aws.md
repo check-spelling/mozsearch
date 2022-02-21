@@ -21,7 +21,7 @@ So there will be one indexer instance processing the repos in
 another instance processing the repos in
 [config2.json](https://github.com/mozsearch/mozsearch-mozilla/blob/master/config2.json),
 etc. The indexing instances have an extra Elastic Block Store volume attached
-where the index will be stored. The following paragraps explain the
+where the index will be stored. The following paragraphs explain the
 lifecycle of a single indexer and its web server; the lifecycle applies
 to each indexer instance.
 
@@ -169,7 +169,7 @@ The AWS Lambda task uses a cron-style scheduler to run once a day.
 
 ### Automated-ish Updates
 
-If you you just want to update the existing daily lambda jobs for release1,
+If you just want to update the existing daily lambda jobs for release1,
 release2, and release4, you can:
 
 - Inside the vagrant VM:
@@ -296,7 +296,7 @@ this is handled specially within parts of the Mozsearch codebase.
 Once you've created a new target group, you can kick off an indexer
 and/or set up a lambda task for this channel using your desired
 config file. The only other step required is to modify the `release-lb`
-load balancer to direct requests for those new repos to the appopriate
+load balancer to direct requests for those new repos to the appropriate
 target group. Do this by selecting the `release-lb` load balancer in
 the AWS EC2 console, going to the listeners tab, and editing the rules.
 Note that you need to edit the rules for both HTTP and HTTPS manually.
@@ -416,7 +416,7 @@ more automation is put in place.
    - Go to the snapshots pane (under "Elastic Block Store" heading in the EC2
      console.
    - Select all the snapshots
-   - From the actions menu, selecte delete.
+   - From the actions menu, select delete.
    - Confirm the deletion as requested
    - This will fail to delete some snapshots (because they are currently in
      use by some AMI) and delete all the unused ones.
